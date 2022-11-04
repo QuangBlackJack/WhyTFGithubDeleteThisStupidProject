@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS</title>
+    <link rel="shortcut icon" href="https://satania.moe/img/satania_cute.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- head -->
+    <div style="width: 99%; border: black solid;">
+        <a href="">
+            <img style="background: #dddddd; border-radius: 50%; border: 2px solid #a1a1a1; height: 100px; margin: 20px; padding: 10px; text-align: center; width: 100px; float: left;"
+                src="https://scontent.fdad2-1.fna.fbcdn.net/v/t1.18169-9/1454756_429329220502002_1859450446_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=9267fe&_nc_ohc=R3_qLR6J4gEAX_9BBh8&_nc_ht=scontent.fdad2-1.fna&oh=00_AT-uiE8oNCPbuzTCwtKuxESPUjnVKXTjir2Rsk6FUNOoJA&oe=61EBF8E5"
+                alt="">
+            <h1 style="float: left; margin-top: 60px; color: black;">Depressed loli</h1>
+            <br><br><br><br><br><br><br><br><br>
+        </a>
+    </div>
+    <br>
+    <!-- body -->
+    <div>
+        <!-- side bar -->
+        <div style="border: black solid; width: 300px;height: 700px; float: left;">
+            <a style="font-size: 50px; color: black; text-decoration: none;" onclick="city()">city</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;" onclick="District()">District</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;" onclick="ward()">Ward</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;">Account</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;" onclick="category()">Category</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;" onclick="product()">Product</a><br>
+            <a style="font-size: 50px; color: black; text-decoration: none;">Cart</a><br>
+        </div>
+        <!-- main -->
+        <div style="border: black solid; width: 78%;height: 700px; float: left; margin-left: 20px; font-size: 40px;"
+            id="main">
+
+
+        </div>
+    </div>
+
+    <script>
+        // city
+        function city() {
+            var main = document.getElementById("main")
+            main.innerHTML = `<div style="margin-top: 20px; margin-left: 20px;">
+                                <label for="">city id</label>
+                                <input id="city-id" type="text">
+                                <label for="">city name</label>
+                                <input id="city-name" type="text"> 
+                                <button onclick="admincity()"> submit </button>
+                                </div>`;
+        }
+
+        // district
+        function District() {
+            var main = document.getElementById("main")
+            main.innerHTML = `<div style="margin-top: 20px; margin-left: 20px;">
+                                <label for="">District id</label>
+                                <input type="text">
+                                <label for="">District name</label>
+                                <input type="text">
+                                <button> submit </button>
+                                </div>`;
+        }
+
+        // ward
+        function ward() {
+            var main = document.getElementById("main")
+            main.innerHTML = `<div style="margin-top: 20px; margin-left: 20px;">
+                                <label for="">ward id</label>
+                                <input type="text">
+                                <label for="">ward name</label>
+                                <input type="text">
+                                <button> submit </button>
+                                </div>`;
+        }
+
+        // category
+        function category() {
+            var main = document.getElementById("main")
+            main.innerHTML = `<div style="margin-top: 20px; margin-left: 20px;">
+                                <label for="">category id</label>
+                                <input type="text">
+                                <label for="">category name</label>
+                                <input type="text"> <br><br>
+                                <label for="">description</label>
+                                <input type="text">
+                                <button> submit </button>
+                            </div>`;
+        }
+
+        //product
+        function product() {
+            var main = document.getElementById("main")
+            main.innerHTML = `<div id="form-product" style="margin-top: 20px; margin-left: 20px;">
+                                <label for="">product name</label>
+                                <input id = "productname" type="text"> 
+                                <label for="">description</label>
+                                <input type="text"> <br><br>
+                                <label for="">price</label>
+                                <input id = "price" type="text"> 
+                                <label for="">category id</label>
+                                <input id = "categoryid" type="text"> <br><br>
+                                <label>product img</label> <input type = "text" id = "image">
+                                <label>productid</label> <input type = "text" id = "productid"> <br> <br>
+                                <button onclick="adminproduct()" > submit </button>
+                                <button onclick="updateproduct()"> update </button>
+                                <button onclick="deleteproduct()"> delete </button>
+                            </div>`;
+        }
+    </script>
+    <script src="../main.js"></script>
+    <!-- test button for js -->
+    <button onclick="testdata()">test</button>
+</body>
+
+</html>

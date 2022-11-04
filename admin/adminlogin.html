@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS</title>
+    <link rel="shortcut icon" href="https://satania.moe/img/satania_cute.png" type="image/x-icon">
+</head>
+<style>
+    .quang {
+        width: 1600px;
+        height: auto;
+        /* linear-gradient co tac dung chuyen mau dan dan tren giao dien 1 trang web */
+        background-image: linear-gradient(0, rgba(221, 90, 162, 0.5), rgba(223, 168, 211, 0.5)), url(https://www.ps4wallpapers.com/wp-content/uploads/2021/01/2021-01-04_5ff3756f355ee_1541662149879.jpg);
+        background-size: 400px;
+    }
+</style>
+
+<body>
+    <!-- head -->
+    <center>
+        <div style="width: 100%; height: 175px; background-color: rgb(216, 101, 149);">
+
+            <div style="font-size: 150px; color: white;">WELCOME MASTER</div>
+
+        </div>
+    </center>
+    <!-- login body -->
+    <div class="quang" style="width: 100%; height: 100%;">
+        <div style="width: 100%; height: 100px;"></div>
+        <center>
+            <div style="width: 540px; height: 230px; background-color: white; border: black solid;" id="login">
+                <!-- title -->
+                <div style="font-size: 50px;">Login Page</div>
+                <!-- username -->
+                <div>
+                    <label style="float: left; margin-top: 10px; margin-left: 10px;" for="">user name</label>
+                    <input style="float: left; margin-left: 20px; margin-top: 10px;" type="text" name="" id="username">
+                </div>
+                <!-- password -->
+                <br><br>
+                <div>
+                    <label style="float: left; margin-top: 10px; margin-left: 10px;" for="">password</label>
+                    <input style="float: left; margin-left: 25px; margin-top: 10px;" type="password" name=""
+                        id="password">
+                </div>
+                <!-- button -->
+                <br><br><br>
+                <div>
+                    <button style="width: 110px; height: 56px; font-size: 40px;" onclick="check()">sumit</button>
+                    <button style="width: 110px; height: 56px; font-size: 40px;"> <a href=""
+                            style="color: black; text-decoration: none;"> clear </a></button>
+                </div>
+            </div>
+
+        </center>
+
+        <!-- end -->
+        <div style="width: 100%; height: 175px; margin-top: 50%; background-color: rgb(216, 101, 149);"></div>
+    </div>
+
+    <script>
+        function check() {
+            var username = "Quangdeptraiwibu";
+            var password = "sugoisugoithanglonquangwibu";
+            var checker1 = document.getElementById("username").value;
+            var checker2 = document.getElementById("password").value;
+            var login = document.getElementById("login");
+
+            if ((checker1 == username) && (checker2 == password)) {
+
+                login.innerHTML = `<a href=""> login here </a>`;
+            }
+            else {
+                alert("fuck you");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

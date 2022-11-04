@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dasd" style="width: 100px; height: 100px;"></div>
+    <script src="main.js"></script>
+
+    <script>
+        window.onload = getproduct();
+
+        function getproduct() {
+            db.transaction(function (tx) {
+                var query = `select product_name from product where category_id = 1`
+
+                tx.executeSql(query, [], function (tx, result) {
+                    alert("dmm");
+                    showproduct(result.rows);
+                }
+                );
+            });
+            function showproduct(product) {
+                var dasd = document.getElementById("dasd")
+                for (var p of product) {
+                    dasd.innerHTML += `sdsdsd${p.Product_name}`;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
